@@ -3,35 +3,36 @@ using namespace std;
 
 //data structure of node.
 class node{
-int data;             //node has two components , one for storing data and other for linking it to other nodes.
+int data;             //node has two components .
 node*next;
 };
 
 //data structure of linked list.
 class linkedList{
-private:            //can be accessed only through member functions.
+private:            // It can be accessed only through member functions.
     node*head;
     node*tail;
 public:
-    //constructor i.e. initialization of head and tail.
+    
+	//Constructor i.e. initialization of head and tail.
     linkedList(){
     head=NULL;
     tail=NULL;
     }
 
-int n=0;                     //will be used to count the number the nodes.
+int n=0;                     //used to count the number the nodes.
 
-void addNode(int a){         //function to add a node.
+void addNode(int a){         //It is a function to add a node.
 	node*temp=new node;
 
-    if (head==NULL){         //for adding the first node.
+    if (head==NULL){         //It is for adding the first node.
 	head=temp;
     tail=temp;
     temp->data=a;
     temp->next=NULL;
 
 	}
-	else{                  //for adding subsequent nodes.
+	else{                  //it is for adding subsequent nodes.
 		node*temp=new node;
 		temp->data=a;
 		temp->next=NULL;
@@ -63,7 +64,7 @@ void insertAt(int pos, int data){           //insert node at any valid position.
     }
     else{cout<<"invalid entry";}
 }
-void deleteNode(){                     //delete the last node.
+void deleteNode(){                     //To delete the last node.
     node*temp=head;
     while(temp->next!=tail){
         temp=temp->next;
@@ -100,7 +101,7 @@ void countItems(){
 cout<<"the number of elements are :"<<n<<endl;
 }
 
-void display(){                   //displays the elements of linked list.
+void display(){                   //Displays the elements of linked list.
 		node*temp=head;
 		for (node* temp=head; temp!=NULL; temp=temp->next){
 			cout << temp->data << "->";
@@ -109,7 +110,7 @@ void display(){                   //displays the elements of linked list.
 	}
 };
 int main(){
-    linkedList s;              //create a linked list named s.
+    linkedList k;              //create a linked list named k.
 for(int i=1;i<11;i++){         //adding elements to the node.
     s.addNode(i);
 }
