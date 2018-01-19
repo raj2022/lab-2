@@ -2,7 +2,7 @@
 using namespace std;
 
 //data structure of node.
-struct node{
+class node{
 int data;             //node has two components , one for storing data and other for linking it to other nodes.
 node*next;
 };
